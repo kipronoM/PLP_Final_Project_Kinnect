@@ -1,0 +1,473 @@
+/* FamilyTree.css - Enhanced styling for Patrilineal Family Tree */
+
+:root {
+    --primary-color: #8B4513; /* Brown - representing earth and stability */
+    --secondary-color: #006400; /* Dark green - representing forests where deer live */
+    --accent-color: #DAA520; /* Golden - representing wealth of heritage */
+    --background-color: #FFF8E1; /* Soft cream background - warm and inviting */
+    --text-dark: #3A3A3A; /* Dark grey for text */
+    --text-light: #FFFFFF; /* White text for dark backgrounds */
+    --card-bg: #FFFFFF; /* White for cards */
+    --border-color: #E8E8E8; /* Light grey for borders */
+    --hover-color: #F5F5F5; /* Very light grey for hover states */
+    --connection-color: #A67C52; /* Medium brown for tree connections */
+    --node-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+    
+    /* Patrilineal specific colors */
+    --male-color: #1a4d80; /* Strong blue for male members */
+    --male-bg: rgba(26, 77, 128, 0.1); /* Light blue background for male rows */
+    --female-color: #9C27B0; /* Purple for female members */
+    --female-bg: rgba(156, 39, 176, 0.05); /* Light purple background for female rows */
+    --spouse-color: #7e57c2; /* Lavender for spouses */
+    --spouse-bg: rgba(126, 87, 194, 0.05); /* Light lavender background for spouse rows */
+    --highlight-male: #2962FF; /* Bright blue for highlighting male lineage */
+}
+
+.family-tree-container {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-color);
+    font-family: 'Raleway', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Main Content Styles */
+.family-tree-main {
+    flex: 1;
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Page Title Section */
+.page-title-section {
+    margin-bottom: 25px;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 15px;
+}
+
+.page-title-section h2 {
+    font-family: 'Cinzel', serif;
+    color: var(--primary-color);
+    margin: 0 0 8px 0;
+    font-size: 2rem;
+}
+
+.page-title-section p {
+    color: var(--text-dark);
+    font-size: 1.1rem;
+    opacity: 0.8;
+    margin: 0;
+}
+
+/* Controls Section */
+.controls-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.view-toggles {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.view-toggle {
+    padding: 8px 16px;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.view-toggle.active {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border-color: var(--primary-color);
+}
+
+.view-toggle:hover:not(.active) {
+    background-color: var(--hover-color);
+}
+
+.toggle-icon {
+    font-size: 1.2rem;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.action-button {
+    padding: 8px 16px;
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s;
+    font-weight: 500;
+}
+
+.action-button:hover {
+    background-color: #004d00;
+}
+
+.action-icon {
+    font-size: 1.1rem;
+}
+
+/* Tree View Container */
+.tree-view-container {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    padding: 25px;
+    margin-bottom: 30px;
+    min-height: 400px;
+}
+
+.tree-message {
+    padding: 15px;
+    background-color: rgba(139, 69, 19, 0.05);
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.tree-message p {
+    margin: 0;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+/* Patrilineal Table Styles */
+.patri-table-container {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    padding: 25px;
+    margin-bottom: 30px;
+    overflow-x: auto;
+}
+
+.patri-table-container h3 {
+    font-family: 'Cinzel', serif;
+    color: var(--primary-color);
+    margin: 0 0 20px 0;
+    font-size: 1.5rem;
+}
+
+.family-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.family-table thead {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+.family-table th {
+    padding: 12px 15px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.family-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 0.95rem;
+}
+
+.family-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Row styles for male/female distinction */
+.male-row {
+    background-color: var(--male-bg);
+}
+
+.male-row td:first-child {
+    color: var(--male-color);
+    font-weight: 600;
+    border-left: 4px solid var(--male-color);
+}
+
+.female-row td:first-child {
+    color: var(--female-color);
+    border-left: 4px solid var(--female-color);
+}
+
+.spouse-row {
+    background-color: var(--spouse-bg);
+}
+
+.spouse-row td:first-child {
+    font-style: italic;
+    color: var(--spouse-color);
+}
+
+/* Table actions */
+.table-action-btn {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: background-color 0.3s;
+}
+
+.table-action-btn:hover {
+    background-color: #723a10;
+}
+
+/* Code Format View */
+.code-format-container {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    padding: 25px;
+    margin-bottom: 30px;
+    overflow-x: auto;
+}
+
+.code-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.code-header h3 {
+    font-family: 'Cinzel', serif;
+    color: var(--primary-color);
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.code-legend {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.9rem;
+}
+
+.legend-symbol {
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+}
+
+.legend-symbol.male {
+    background-color: var(--male-color);
+}
+
+.legend-symbol.female {
+    background-color: var(--female-color);
+}
+
+.legend-indicator {
+    font-family: monospace;
+    font-weight: bold;
+}
+
+.code-tree {
+    font-family: 'Courier New', monospace;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    color: var(--text-dark);
+    line-height: 1.5;
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+.code-node {
+    margin-bottom: 5px;
+}
+
+.code-line {
+    display: flex;
+    align-items: center;
+    padding: 3px 0;
+    cursor: pointer;
+}
+
+.code-line:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.code-prefix {
+    color: var(--connection-color);
+    white-space: pre;
+    user-select: none;
+}
+
+.member-name {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+/* Style male and female names differently */
+.code-line .member-name {
+    color: var(--male-color);
+}
+
+.spouse-line .member-name {
+    color: var(--spouse-color);
+    font-style: italic;
+}
+
+/* Female children should have a different style */
+.code-line[data-gender="female"] .member-name {
+    color: var(--female-color);
+}
+
+.code-dates {
+    color: #555;
+    margin-right: 5px;
+}
+
+.code-relation {
+    color: #666;
+    font-style: italic;
+}
+
+.code-married {
+    color: var(--spouse-color);
+    font-style: italic;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.toggle-indicator {
+    color: #888;
+    cursor: pointer;
+    user-select: none;
+}
+
+.spouse-line {
+    padding-left: 10px;
+    color: var(--spouse-color);
+}
+
+.children-container {
+    margin-left: 10px;
+}
+
+/* Enhanced patrilineal features */
+/* Emphasize the male lineage path */
+.patrilineal-path {
+    position: relative;
+}
+
+.patrilineal-path::before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background-color: var(--highlight-male);
+    opacity: 0.6;
+}
+
+/* Make male lineage more prominent in all views */
+.lineage-column {
+    font-weight: 500;
+    position: relative;
+}
+
+.lineage-highlight {
+    background-color: rgba(26, 77, 128, 0.1);
+    border-radius: 3px;
+    padding: 2px 5px;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 992px) {
+    .controls-section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .view-toggles, .action-buttons {
+        width: 100%;
+    }
+    
+    .view-toggle, .action-button {
+        flex: 1;
+        justify-content: center;
+    }
+    
+    .code-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 768px) {
+    .family-table {
+        font-size: 0.9rem;
+    }
+    
+    .family-table th, .family-table td {
+        padding: 10px;
+    }
+    
+    .table-action-btn {
+        padding: 4px 8px;
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .family-tree-main {
+        padding: 20px 15px;
+    }
+    
+    .page-title-section h2 {
+        font-size: 1.6rem;
+    }
+    
+    .code-legend {
+        flex-direction: column;
+        gap: 8px;
+    }
+}

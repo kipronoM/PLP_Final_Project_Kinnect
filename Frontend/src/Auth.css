@@ -1,0 +1,284 @@
+/* Auth.css - Shared styling for Login, Signup, and ForgotPassword pages */
+
+:root {
+  --primary-color: #8B4513; /* Brown - representing earth and stability */
+  --secondary-color: #006400; /* Dark green - representing forests where deer live */
+  --accent-color: #DAA520; /* Golden - representing wealth of heritage */
+  --background-color: #FFF8E1; /* Soft cream background - warm and inviting */
+  --text-dark: #3A3A3A; /* Dark grey for text */
+  --text-light: #FFFFFF; /* White text for dark backgrounds */
+  --error-color: #D32F2F; /* Red for errors */
+  --success-color: #2E7D32; /* Green for success messages */
+}
+
+.auth-page-container {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  background-color: var(--background-color);
+}
+
+.auth-sidebar {
+  width: 40%;
+  background-color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.auth-sidebar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./assets/tribal-pattern.png');
+  background-size: cover;
+  opacity: 0.1;
+  z-index: 1;
+}
+
+.auth-sidebar-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: var(--text-light);
+}
+
+.sidebar-logo {
+  width: 90px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.auth-sidebar h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+.auth-sidebar p {
+  font-size: 1rem;
+  opacity: 0.9;
+  margin-bottom: 25px;
+}
+
+.sidebar-decoration {
+  width: 50px;
+  height: 4px;
+  background-color: var(--accent-color);
+  margin: 0 auto;
+}
+
+.auth-form-container {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px;
+  background-color: var(--text-light);
+}
+
+.auth-form-header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.auth-form-header h1 {
+  color: var(--primary-color);
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.auth-form-header p {
+  color: var(--text-dark);
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+.auth-form {
+  max-width: 400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--text-dark);
+  font-weight: 500;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+  border-color: var(--secondary-color);
+  outline: none;
+}
+
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+}
+
+.remember-me input {
+  margin-right: 8px;
+}
+
+.forgot-password {
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+.form-checkbox {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.form-checkbox input {
+  margin-right: 10px;
+  margin-top: 3px;
+}
+
+.form-checkbox label {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.form-checkbox a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+.form-checkbox a:hover {
+  text-decoration: underline;
+}
+
+.auth-button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--secondary-color);
+  color: var(--text-light);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  text-align: center;
+  display: block;
+}
+
+.auth-button:hover {
+  background-color: #004d00;
+  transform: translateY(-2px);
+}
+
+.auth-redirect {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.95rem;
+}
+
+.auth-redirect a {
+  color: var(--secondary-color);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.auth-redirect a:hover {
+  text-decoration: underline;
+}
+
+/* Success message styling */
+.success-message {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+}
+
+.success-icon {
+  width: 60px;
+  height: 60px;
+  background-color: var(--success-color);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 20px;
+  font-size: 30px;
+}
+
+.success-message h2 {
+  color: var(--success-color);
+  margin-bottom: 15px;
+}
+
+.success-message p {
+  color: var(--text-dark);
+  margin-bottom: 25px;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  .auth-page-container {
+    flex-direction: column;
+  }
+  
+  .auth-sidebar,
+  .auth-form-container {
+    width: 100%;
+  }
+  
+  .auth-sidebar {
+    padding: 25px;
+  }
+  
+  .auth-form-container {
+    padding: 30px 25px;
+  }
+}
+
+@media (max-width: 576px) {
+  .auth-form-header h1 {
+    font-size: 1.6rem;
+  }
+  
+  .form-options {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
