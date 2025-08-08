@@ -9,14 +9,14 @@ const FamilyTree = () => {
     // Male head of family (Root)
     patriarch: {
       id: 2,
-      name: 'Robert Doe',
+      name: 'Kimutai Kalya',
       birthYear: '1955',
       deathYear: null,
       imageUrl: null,
       relationship: 'Patriarch',
       spouse: {
         id: 3,
-        name: 'Sarah Doe',
+        name: 'Taputany kalya',
         birthYear: '1958',
         deathYear: null,
         imageUrl: null,
@@ -25,14 +25,14 @@ const FamilyTree = () => {
       parents: {
         father: {
           id: 7,
-          name: 'James Doe Sr.',
+          name: 'Kipkalya Kikwai',
           birthYear: '1930',
           deathYear: '2015',
           imageUrl: null,
           relationship: 'Father',
           spouse: {
             id: 8,
-            name: 'Eleanor Doe',
+            name: 'Taprandich Kikwai',
             birthYear: '1933',
             deathYear: null,
             imageUrl: null,
@@ -43,7 +43,7 @@ const FamilyTree = () => {
       children: [
         {
           id: 1,
-          name: 'John Doe',
+          name: 'Joel Kimetto',
           birthYear: '1980',
           deathYear: null,
           imageUrl: null,
@@ -52,7 +52,7 @@ const FamilyTree = () => {
           children: [
             {
               id: 6,
-              name: 'Thomas Doe',
+              name: 'Peter Kimetto',
               birthYear: '2012',
               deathYear: null,
               imageUrl: null,
@@ -62,7 +62,7 @@ const FamilyTree = () => {
             },
             {
               id: 5,
-              name: 'Mary Doe',
+              name: 'Agnes Towett',
               birthYear: '2010',
               deathYear: null,
               imageUrl: null,
@@ -74,7 +74,7 @@ const FamilyTree = () => {
         },
         {
           id: 4,
-          name: 'James Doe',
+          name: 'John Bett',
           birthYear: '1983',
           deathYear: null,
           imageUrl: null,
@@ -312,7 +312,7 @@ const FamilyTree = () => {
         
         <div className="header-actions">
           <div className="user-profile">
-            <div className="user-avatar">J</div>
+            <div className="user-avatar">K</div>
             <span className="user-rank">Parent</span>
             <div className="user-menu-dropdown">
               <Link to="/profile">My Profile</Link>

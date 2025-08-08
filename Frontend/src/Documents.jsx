@@ -9,10 +9,10 @@ const Documents = () => {
     {
       id: 1,
       title: 'Birth Certificate',
-      subject: 'Mary Doe',
+      subject: 'Weldon Rutto',
       type: 'Certificate',
       date: 'June 15, 2010',
-      addedBy: 'John Doe',
+      addedBy: 'Fred Kiprono',
       addedDate: 'Feb 20, 2025',
       tags: ['birth', 'official', 'certificate'],
       thumbnailUrl: null
@@ -20,10 +20,10 @@ const Documents = () => {
     {
       id: 2,
       title: 'Marriage License',
-      subject: 'Robert & Sarah Doe',
+      subject: 'Robert & Sarah kalya',
       type: 'Certificate',
       date: 'April 23, 1979',
-      addedBy: 'John Doe',
+      addedBy: 'Fred Kiprono',
       addedDate: 'Feb 10, 2025',
       tags: ['marriage', 'official', 'certificate'],
       thumbnailUrl: null
@@ -31,10 +31,10 @@ const Documents = () => {
     {
       id: 3,
       title: 'Family Reunion Photo',
-      subject: 'Doe Family',
+      subject: 'Kalya Family',
       type: 'Photo',
       date: 'July 04, 2022',
-      addedBy: 'John Doe',
+      addedBy: 'Fred Kiprono',
       addedDate: 'Jan 30, 2025',
       tags: ['photo', 'reunion', 'family'],
       thumbnailUrl: null
@@ -42,10 +42,10 @@ const Documents = () => {
     {
       id: 4,
       title: 'Grandfather\'s Journal',
-      subject: 'James Doe Sr.',
+      subject: 'Chebochok Sawe.',
       type: 'Journal',
       date: '1950-1970',
-      addedBy: 'Robert Doe',
+      addedBy: 'Fred Kiprono',
       addedDate: 'Jan 15, 2025',
       tags: ['journal', 'memoir', 'personal'],
       thumbnailUrl: null
@@ -53,10 +53,10 @@ const Documents = () => {
     {
       id: 5,
       title: 'Family Recipe Collection',
-      subject: 'Eleanor Doe',
+      subject: 'Milcah Langat',
       type: 'Recipe Book',
       date: '1940-1980',
-      addedBy: 'Sarah Doe',
+      addedBy: 'Fred Kiprono',
       addedDate: 'Jan 05, 2025',
       tags: ['recipe', 'tradition', 'cooking'],
       thumbnailUrl: null
@@ -111,7 +111,7 @@ const Documents = () => {
         
         <div className="header-actions">
           <div className="user-profile">
-            <div className="user-avatar">J</div>
+            <div className="user-avatar">K</div>
             <span className="user-rank">Parent</span>
             <div className="user-menu-dropdown">
               <Link to="/profile">My Profile</Link>

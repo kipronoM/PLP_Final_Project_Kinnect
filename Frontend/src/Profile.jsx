@@ -6,27 +6,27 @@ import deerLogo from './assets/deer-logo.svg';
 const Profile = () => {
   // Enhanced user data with family information
   const user = {
-    name: 'John Doe',
-    email: 'john.doe@example.com',
+    name: 'Kiprono Fred',
+    email: 'Kiprono@gmail.com',
     joinDate: 'March 1, 2025',
     familyRank: 'Parent',
-    clan: 'Eagle Clan',
-    biography: 'Family historian and genealogy enthusiast. Dedicated to preserving our family heritage for future generations.',
-    phone: '+1 (555) 123-4567',
-    location: 'Portland, Oregon',
+    clan: 'Kibamwek Clan',
+    biography: 'Computer Technology enthusiast. Dedicated to preserving our family heritage for future generations.',
+    phone: '254 723456789',
+    location: 'Silibwet, Bomet',
     maritalStatus: 'Married',
     spouse: {
-      name: 'Jane Doe',
-      clan: 'Wolf Clan',
+      name: 'Alisca Wairimu',
+      clan: 'Kikuyu',
       familyRank: 'Parent'
     },
     children: [
-      { name: 'Emily Doe', age: 14, clan: 'Eagle Clan' },
-      { name: 'Michael Doe', age: 10, clan: 'Eagle Clan' }
+      { name: 'Peter Rono', age: 14, clan: 'Kibamwek Clan' },
+      { name: 'Michael Rono', age: 10, clan: 'Kibamwek Clan' }
     ],
     preferences: {
       emailNotifications: true,
-      language: 'English',
+      language: 'Kipsigis',
       privacySettings: 'Family Only',
       theme: 'Light'
     }

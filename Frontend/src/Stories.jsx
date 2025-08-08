@@ -9,8 +9,8 @@ const Stories = () => {
     {
       id: 1,
       title: 'The Great Migration',
-      subject: 'Doe Family',
-      author: 'Robert Doe',
+      subject: 'Kalya Family',
+      author: 'Robert Rutto',
       date: 'Feb 15, 2025',
       excerpt: 'In 1968, our family made the difficult decision to leave Chicago and move west to Portland. The journey was challenging but ultimately rewarding...',
       tags: ['migration', 'family history', '1960s'],
@@ -20,8 +20,8 @@ const Stories = () => {
     {
       id: 2,
       title: 'Opening the Family Business',
-      subject: 'Doe\'s Hardware Store',
-      author: 'John Doe',
+      subject: 'Kalya\'s Hardware Store',
+      author: 'John Bett',
       date: 'Jan 25, 2025',
       excerpt: 'Grandfather James always dreamed of owning his own business. In 1992, that dream became reality when we opened Doe\'s Hardware Store...',
       tags: ['business', 'entrepreneurship', '1990s'],
@@ -31,8 +31,8 @@ const Stories = () => {
     {
       id: 3,
       title: 'Grandmother\'s Cooking Lessons',
-      subject: 'Eleanor Doe',
-      author: 'Sarah Doe',
+      subject: '',
+      author: 'Fred Kiprono',
       date: 'Jan 10, 2025',
       excerpt: 'Some of my fondest childhood memories are of spending Sunday afternoons in Grandmother Eleanor\'s kitchen, learning her secret recipes...',
       tags: ['traditions', 'cooking', 'memories'],
@@ -43,7 +43,7 @@ const Stories = () => {
       id: 4,
       title: 'Summer at the Lake House',
       subject: 'Family Vacations',
-      author: 'James Doe',
+      author: 'James Tanui',
       date: 'Dec 20, 2024',
       excerpt: 'Every summer from 1985 to 1995, our entire extended family would gather at the lake house in Minnesota for two weeks of swimming, fishing, and bonding...',
       tags: ['vacations', 'traditions', '1980s'],
@@ -99,7 +99,7 @@ const Stories = () => {
         
         <div className="header-actions">
           <div className="user-profile">
-            <div className="user-avatar">J</div>
+            <div className="user-avatar">K</div>
             <span className="user-rank">Parent</span>
             <div className="user-menu-dropdown">
               <Link to="/profile">My Profile</Link>

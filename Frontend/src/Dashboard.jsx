@@ -6,20 +6,20 @@ import deerLogo from './assets/deer-logo.svg';
 const Dashboard = () => {
   // Mock user data - in a real app, this would come from your authentication system
   const user = {
-    name: 'John Doe',
-    email: 'john.doe@example.com',
+    name: 'Kiprono',
+    email: 'Kiprono@gmail.com',
     joinDate: 'March 1, 2025',
     familyRank: 'Parent',
     familyMembers: 12,
     recentActivity: [
-      { id: 1, type: 'Added family member', name: 'Elizabeth Doe', relation: 'Aunt', date: 'Feb 28, 2025' },
-      { id: 2, type: 'Updated information', name: 'Robert Doe', relation: 'Grandfather', date: 'Feb 25, 2025' },
-      { id: 3, type: 'Added document', name: 'Birth Certificate', subject: 'Mary Doe', date: 'Feb 20, 2025' }
+      { id: 1, type: 'Added family member', name: 'Elizabeth Maiwa', relation: 'Aunt', date: 'Feb 28, 2025' },
+      { id: 2, type: 'Updated information', name: 'Robert Sigilai', relation: 'Grandfather', date: 'Feb 25, 2025' },
+      { id: 3, type: 'Added document', name: 'Birth Certificate', subject: 'Mary Chesilim', date: 'Feb 20, 2025' }
     ],
     timelineEvents: [
-      { id: 1, year: '1945', event: 'Grandparents\' Wedding', description: 'James and Eleanor Doe were married in Chicago' },
-      { id: 2, year: '1968', event: 'Family Migration', description: 'The Doe family moved from Chicago to Portland' },
-      { id: 3, year: '1992', event: 'Family Business', description: 'Opening of Doe\'s Hardware Store' }
+      { id: 1, year: '1945', event: 'Grandparents\' Wedding', description: 'Kimetto and TapSabei were married in Kericho' },
+      { id: 2, year: '1968', event: 'Family Migration', description: 'The Kalya family moved from Lumbwa to Longisa' },
+      { id: 3, year: '1992', event: 'Family Business', description: 'Opening of Kalya\'s Hardware Store' }
     ]
   };
 
@@ -158,7 +158,7 @@ const Dashboard = () => {
                 <div className="placeholder-image">👨‍👩‍👧‍👦</div>
               </div>
               <div className="spotlight-info">
-                <h4>Doe Family Reunion</h4>
+                <h4>Kalya Family Reunion</h4>
                 <p>Annual gathering celebrating our shared heritage</p>
                 <p><strong>Date:</strong> July, 15 2025</p>
                 <button className="spotlight-button">View Details</button>
