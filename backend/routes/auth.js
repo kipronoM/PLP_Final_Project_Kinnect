@@ -15,7 +15,7 @@ const generateToken = (id) => {
 // @desc    Register new user
 // @route   POST /api/register
 // @access  Public
-router.post('/register', async (req, res) => {
+router.post('/signup', async (req, res) => {
   try {
     const { name, email, password } = req.body;
 
