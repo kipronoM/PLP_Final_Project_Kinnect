@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import './Auth.css';
-import deerLogo from './assets/deer-logo.svg';
+import deerLogo from '../assets/deer-logo.svg';
 
 const ResetPassword = () => {
   const [formData, setFormData] = useState({

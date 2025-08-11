@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Documents.css';
-import deerLogo from './assets/deer-logo.svg';
+import deerLogo from '../assets/deer-logo.svg';
 
 const Documents = () => {
   // Mock document data - in a real app, this would come from an API

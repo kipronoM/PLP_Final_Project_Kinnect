@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './Auth.css';
-import deerLogo from './assets/deer-logo.svg';
+import deerLogo from '../assets/deer-logo.svg';
 
 const Login = () => {
   const [formData, setFormData] = useState({

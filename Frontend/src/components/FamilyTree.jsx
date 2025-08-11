@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './FamilyTree.css';
-import deerLogo from './assets/deer-logo.svg';
+import deerLogo from '../assets/deer-logo.svg';
 
 const FamilyTree = () => {
   // Updated family data structure to prioritize male lineage

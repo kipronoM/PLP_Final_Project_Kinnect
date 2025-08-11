@@ -1,16 +1,16 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import Home from './Home';
-import Login from './Login';
-import Signup from './Signup';
-import ForgotPassword from './ForgotPassword';
-import ResetPassword from './ResetPassword';
-import Dashboard from './Dashboard';
-import FamilyTree from './FamilyTree';  // Import the FamilyTree page
-import Documents from './Documents';  // Import the Documents page
-import Stories from './Stories';  // Import the Stories page
-import Profile from './Profile';  // Import the Profile page
-import Admin from './Settings';  // Import the Admin page (optional)
+import Home from './components/Home';
+import Login from './components/Login';
+import Signup from './components/Signup';
+import ForgotPassword from './components/ForgotPassword';
+import ResetPassword from './components/ResetPassword';
+import Dashboard from './components/Dashboard';
+import FamilyTree from './components/FamilyTree';  // Import the FamilyTree page
+import Documents from './components/Documents';  // Import the Documents page
+import Stories from './components/Stories';  // Import the Stories page
+import Profile from './components/Profile';  // Import the Profile page
+import Admin from './components/Settings';  // Import the Admin page (optional)
 import './App.css';
 
 function App() {

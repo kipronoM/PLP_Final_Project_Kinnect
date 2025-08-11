@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Home.css';
-import deerLogo from './assets/deer-logo.svg';
+import deerLogo from '../assets/deer-logo.svg';
 
 const Home = () => {
   return (
